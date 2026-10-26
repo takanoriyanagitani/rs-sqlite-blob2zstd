@@ -1,0 +1,50 @@
+[package]
+name = "rs-sqlite-blob2zstd"
+version = "0.1.0"
+edition = "2024"
+
+exclude = [
+]
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+unwrap_used = "forbid"
+expect_used = "forbid"
+panic = "forbid"
+
+[profile.release-wasi]
+inherits = "release"
+lto = true
+strip = true
+opt-level = 's'
+codegen-units = 1
+
+[[bin]]
+name = "sqlite-blob2zstd"
+
+[dependencies.rusqlite]
+version = "0.40.2"
+default-features = false
+features = [
+    "bundled",
+    "wasm32-wasi-vfs",
+]
+
+[dependencies.zrip]
+version = "0.8.13"
+default-features = false
+features = [
+  "frame",
+  "ldm",
+  "simd",
+  "std",
+]
+
+[dependencies.serde_json]
+version = "1"
+default-features = false
+features = [
+  "std",
+]
