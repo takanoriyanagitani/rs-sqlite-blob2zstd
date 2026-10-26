@@ -1,0 +1,1 @@
+target/wasm32-wasip1/release-wasi/sqlite-blob2zstd.wasm
