@@ -3,7 +3,16 @@ name = "rs-sqlite-blob2zstd"
 version = "0.1.0"
 edition = "2024"
 
+description = "Compress SQLite BLOBs using zstd"
+license = "Apache-2.0"
+repository = "https://github.com/takanoriyanagitani/rs-sqlite-blob2zstd"
+homepage = "https://github.com/takanoriyanagitani/rs-sqlite-blob2zstd"
+documentation = "https://docs.rs/rs-sqlite-blob2zstd/latest"
+keywords = ["sqlite", "zstd", "compression", "blob"]
+
 exclude = [
+  "sqlite-blob2zstd.wasm",
+  "in.sqlite.db3",
 ]
 
 [lints.rust]
